@@ -1,0 +1,123 @@
+✅ Task 1: Compute Yearly Statistics
+🔹 Objective:
+Is task mein humein har sale year ke liye car sales data ka analysis karna tha. Specifically, humein nikalna tha:
+
+Total number of vehicles sold
+
+Total selling price of all cars
+
+Average odometer reading of sold vehicles
+
+Average age of the vehicles sold
+
+🛠️ Approach:
+CSV file ka har line parse kiya
+
+Date of sale se sale year nikala
+
+Har line ko (year, (count, price, odo, age)) ke form mein convert kiya
+
+reduceByKey use karke stats ko aggregate kiya
+
+Final output ko console par print kiya
+
+🧾 Sample Output:
+yaml
+Copy
+Edit
+Year: 2014
+Number of vehicles sold: 53657
+Total selling price: $607,440,320.00
+Average odometer reading: 82477.16
+Average age: 5.34
+------
+Year: 2015
+Number of vehicles sold: 505048
+Total selling price: $6,998,178,306.00
+Average odometer reading: 66820.16
+Average age: 4.81
+------
+
+
+
+
+✅ Task 2: Compute Yearly Statistics per Brand
+🔹 Objective:
+Is task mein Task 1 ke jaise hi stats chahiye the, lekin brand-wise bhi, matlab:
+
+Vehicles sold per year per brand
+
+Total value of cars sold per year per brand
+
+Average distance travelled (odometer) per brand per year
+
+Average age of sold vehicles per brand per year
+
+🛠️ Approach:
+Har line ko parse kiya aur brand + year nikale
+
+Har line ko key (sale_year, brand) ke form mein banaya
+
+Values (1, price, odo, age) banayi
+
+reduceByKey se sab accumulate kiya
+
+Final results ko sorted() karke print kiya
+
+🧾 Sample Output:
+yaml
+Copy
+Edit
+Year: 2015, Brand: Volkswagen
+Number of vehicles sold: 11392
+Total selling price: $109,619,910.00
+Average odometer reading: 64884.98
+Average age: 4.99
+------
+Year: 2015, Brand: Volvo
+Number of vehicles sold: 3384
+Total selling price: $39,990,327.00
+Average odometer reading: 82147.26
+Average age: 6.64
+------
+Year: 2015, Brand: bmw
+Number of vehicles sold: 28
+Total selling price: $844,850.00
+Average odometer reading: 56587.54
+Average age: 4.79
+------
+...
+(Ye report 2015 ke kai brands ke liye show kiya gaya hai.)
+---->>
+
+or: Charcoal | Vehicles Sold: 479 | Total Sales Value: $7,782,551.00
+Color: Brown | Vehicles Sold: 6,717 | Total Sales Value: $103,124,812.00
+Color: Orange | Vehicles Sold: 2,078 | Total Sales Value: $26,571,613.00
+Color: Purple | Vehicles Sold: 1,561 | Total Sales Value: $18,684,678.00
+Color: Off-White | Vehicles Sold: 1,449 | Total Sales Value: $22,068,603.00
+Color: Yellow | Vehicles Sold: 1,285 | Total Sales Value: $16,258,080.00
+Color: Charcoal | Vehicles Sold: 479 | Total Sales Value: $7,782,551.00
+Color: Off-White | Vehicles Sold: 1,449 | Total Sales Value: $22,068,603.00
+Color: Yellow | Vehicles Sold: 1,285 | Total Sales Value: $16,258,080.00
+Color: Charcoal | Vehicles Sold: 479 | Total Sales Value: $7,782,551.00
+Color: Turquoise | Vehicles Sold: 236 | Total Sales Value: $1,976,377.00
+Color: Pink | Vehicles Sold: 42 | Total Sales Value: $493,350.00
+Color: Yellow | Vehicles Sold: 1,285 | Total Sales Value: $16,258,080.00
+Color: Charcoal | Vehicles Sold: 479 | Total Sales Value: $7,782,551.00
+Color: Turquoise | Vehicles Sold: 236 | Total Sales Value: $1,976,377.00
+Color: Pink | Vehicles Sold: 42 | Total Sales Value: $493,350.00
+Color: Lime | Vehicles Sold: 15 | Total Sales Value: $198,850.00
+Color: Turquoise | Vehicles Sold: 236 | Total Sales Value: $1,976,377.00
+Color: Pink | Vehicles Sold: 42 | Total Sales Value: $493,350.00
+Color: Lime | Vehicles Sold: 15 | Total Sales Value: $198,850.00
+Color: Pink | Vehicles Sold: 42 | Total Sales Value: $493,350.00
+Color: Lime | Vehicles Sold: 15 | Total Sales Value: $198,850.00
+PS E:\FULL-Stack_Projects\AI -ML> SUCCESS: The process with PID 2676 (child process of PID 13492) has been terminated.
+Color: Lime | Vehicles Sold: 15 | Total Sales Value: $198,850.00
+PS E:\FULL-Stack_Projects\AI -ML> SUCCESS: The process with PID 2676 (child process of PID 13492) has been terminated.
+PS E:\FULL-Stack_Projects\AI -ML> SUCCESS: The process with PID 2676 (child process of PID 13492) has been terminated.
+SUCCESS: The process with PID 13492 (child process of PID 15396) has been terminated.
+SUCCESS: The process with PID 15396 (child process of PID 13244) has been terminated.
+
+
+

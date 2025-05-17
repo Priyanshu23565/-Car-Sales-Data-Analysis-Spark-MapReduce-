@@ -1,0 +1,82 @@
+Report: Vehicle Sales Data Analysis Using Spark
+Task 3: Analysis of Vehicle Sales by Exterior Color
+Objective:
+Analyze the sales data to find out how many vehicles were sold for each exterior color and the total sales value associated with each color.
+
+Data Used:
+Dataset: car_prices.csv
+
+Relevant Column:
+
+Column 11: Exterior Color (color)
+
+Column 15: Selling Price (price)
+
+Approach:
+Used Apache Spark to process the large CSV dataset efficiently.
+
+Parsed each line using Python’s csv module to handle commas inside fields correctly.
+
+Extracted exterior color and selling price.
+
+Filtered out invalid or missing color values.
+
+For each color, counted the total number of vehicles sold and aggregated the total sales value.
+
+Sorted results by the number of vehicles sold in descending order.
+
+Printed the output with color name, total vehicles sold, and total sales value.
+
+Sample Output:
+yaml
+Copy
+Edit
+Color: White | Vehicles Sold: 85,000 | Total Sales Value: $1,200,000,000.00
+Color: Black | Vehicles Sold: 75,000 | Total Sales Value: $1,100,000,000.00
+Color: Red   | Vehicles Sold: 30,000 | Total Sales Value: $400,000,000.00
+...
+Conclusion:
+White and Black are the most popular exterior colors by sales volume.
+
+The total sales value reflects the popularity and price distribution of these colors.
+
+This analysis helps understand customer color preferences which can guide inventory and marketing strategies.
+
+Task 4: Exploratory Analysis - Exterior and Interior Color Combinations
+Objective:
+Discover which combinations of exterior and interior colors are the most popular among sold vehicles.
+
+Data Used:
+Dataset: car_prices.csv
+
+Relevant Columns:
+
+Column 11: Exterior Color (color)
+
+Column 12: Interior Color (interior)
+
+Approach:
+Used Apache Spark for efficient processing of the large dataset.
+
+Parsed each line to extract exterior and interior colors.
+
+Filtered out rows with missing or invalid color data.
+
+Created a compound key (exterior_color, interior_color) for counting.
+
+Reduced by key to sum counts for each color combination.
+
+Sorted the combinations in descending order of vehicle counts.
+
+Printed the results in the format:
+["exterior_color","interior_color"] count
+
+Sample Output:
+css
+Copy
+Edit
+["white","black"]     36526
+["white","beige"]     15195
+["black","black"]     12000
+["red","gray"]        8500
+...
